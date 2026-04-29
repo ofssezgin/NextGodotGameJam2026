@@ -1,0 +1,291 @@
+[gd_scene format=3 uid="uid://bc4wve6ddljc"]
+
+[ext_resource type="Script" uid="uid://bki0b7lim8cbl" path="res://main_level.gd" id="1_6614m"]
+[ext_resource type="FontFile" uid="uid://bnhh7obf8sca8" path="res://LowresPixel-Regular.otf" id="2_eqmdw"]
+
+[node name="MainLevel" type="Node2D" unique_id=1725742577]
+script = ExtResource("1_6614m")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=735586697]
+
+[node name="MagazaPaneli" type="Panel" parent="UI" unique_id=1738779459]
+offset_top = 110.0
+offset_right = 266.0
+offset_bottom = 648.0
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MagazaPaneli" unique_id=1772259711]
+layout_mode = 0
+offset_top = -58.0
+offset_right = 269.0
+offset_bottom = 449.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MagazaPaneli/MarginContainer" unique_id=990838390]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="BtnKulube" type="Button" parent="UI/MagazaPaneli/MarginContainer/VBoxContainer" unique_id=557927434]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 50)
+layout_mode = 2
+text = "KULÜBE AL: 15 P"
+
+[node name="BtnEv" type="Button" parent="UI/MagazaPaneli/MarginContainer/VBoxContainer" unique_id=1630071896]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 50)
+layout_mode = 2
+text = "EV AL: 100 P"
+
+[node name="BtnIlkokul" type="Button" parent="UI/MagazaPaneli/MarginContainer/VBoxContainer" unique_id=577795953]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 50)
+layout_mode = 2
+text = "İLKOKUL AL: 500P"
+
+[node name="BtnHastane" type="Button" parent="UI/MagazaPaneli/MarginContainer/VBoxContainer" unique_id=1339678826]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 50)
+layout_mode = 2
+text = "HASTANE AL: 2000P"
+
+[node name="BtnUniversite" type="Button" parent="UI/MagazaPaneli/MarginContainer/VBoxContainer" unique_id=511786]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 50)
+layout_mode = 2
+text = "ÜNİVERSİTE AL: 5000P"
+
+[node name="BtnOyunuBitir" type="Button" parent="UI/MagazaPaneli" unique_id=40525804]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 380.0
+offset_right = 245.0
+offset_bottom = 432.0
+text = "OYUNU BİTİR"
+
+[node name="SesPaneli" type="Panel" parent="UI" unique_id=1448653890]
+offset_left = 960.0
+offset_top = 7.0
+offset_right = 1139.0
+offset_bottom = 53.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/SesPaneli" unique_id=1219412094]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 179.0
+offset_bottom = 46.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/SesPaneli/HBoxContainer" unique_id=1545789212]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/SesPaneli/HBoxContainer/VBoxContainer" unique_id=1847965896]
+layout_mode = 2
+text = "Müzik Sesi "
+
+[node name="MuzikSlider" type="HSlider" parent="UI/SesPaneli/HBoxContainer/VBoxContainer" unique_id=696592235]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+
+[node name="Control" type="Control" parent="UI/SesPaneli/HBoxContainer" unique_id=2046405288]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="UI/SesPaneli/HBoxContainer" unique_id=1512570185]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="UI/SesPaneli/HBoxContainer/VBoxContainer2" unique_id=1161108673]
+layout_mode = 2
+text = "Ses Efekti "
+
+[node name="SesEfektiSlider" type="HSlider" parent="UI/SesPaneli/HBoxContainer/VBoxContainer2" unique_id=928596999]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+
+[node name="PointsLabel" type="Label" parent="UI" unique_id=1635347356]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -556.0
+offset_top = 26.0
+offset_right = -50.0
+offset_bottom = 71.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Gelecek Puanı: 0"
+
+[node name="PPSLabel" type="Label" parent="UI" unique_id=261848183]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -553.0
+offset_top = 72.0
+offset_right = -128.0
+offset_bottom = 106.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "Saniye Başına Puan: 0"
+
+[node name="Clue" type="Label" parent="UI" unique_id=506257856]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -560.0
+offset_top = 544.0
+offset_right = -332.0
+offset_bottom = 645.0
+grow_horizontal = 2
+text = "Gelecek puanı kazanmak için
+yapılara tıklayabilirsiniz!
+Oyunu bitirmek için bütün
+binaları satın alın!"
+horizontal_alignment = 1
+
+[node name="HataMesaji" type="Label" parent="UI" unique_id=1402608344]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -219.0
+offset_top = 5.0
+offset_right = 219.0
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.83137256, 0, 0, 0.99607843)
+theme_override_font_sizes/font_size = 32
+text = "Yeterli gelecek puanınız yok!"
+
+[node name="BonusPaneli" type="HBoxContainer" parent="UI" unique_id=424323671]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -854.0
+offset_top = -61.0
+offset_right = -29.0
+offset_bottom = -7.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="BtnBonusKulube" type="Button" parent="UI/BonusPaneli" unique_id=1193636943]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 50)
+layout_mode = 2
+text = "Balta (75 P)
+Kulübe Üretimi x2"
+
+[node name="BtnBonusEv" type="Button" parent="UI/BonusPaneli" unique_id=2023623806]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 50)
+layout_mode = 2
+text = "Mutfak (250 P)
+Ev Üretimi x2"
+
+[node name="BtnBonusIlkokul" type="Button" parent="UI/BonusPaneli" unique_id=2021237029]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 50)
+layout_mode = 2
+text = "Bilgisayar (500 P)
+İlkokul Üretimi x2"
+
+[node name="BtnBonusHastane" type="Button" parent="UI/BonusPaneli" unique_id=261485141]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 50)
+layout_mode = 2
+text = "Ultrason (1000 P)
+Hastane Üretimi x2"
+
+[node name="BtnBonusUniversite" type="Button" parent="UI/BonusPaneli" unique_id=1897395085]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 50)
+layout_mode = 2
+text = "Kütüphane (2500 P)
+Üni. Üretimi x2"
+
+[node name="WinScreen" type="CanvasLayer" parent="." unique_id=369648329]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="WinScreen" unique_id=2080905232]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="Label" type="Label" parent="WinScreen" unique_id=1863280601]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -458.0
+offset_top = -207.0
+offset_right = 458.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_eqmdw")
+theme_override_font_sizes/font_size = 128
+text = "TEBRİKLER
+ŞEHRİ KURDUN !!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="WinScreen" unique_id=108676055]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -461.5
+offset_top = -214.0
+offset_right = 461.5
+offset_bottom = -170.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_eqmdw")
+theme_override_font_sizes/font_size = 32
+text = "Dayanışman için teşekkürler!"
+horizontal_alignment = 1
+
+[node name="AnaMenuButonu" type="Button" parent="WinScreen" unique_id=1002601927]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -171.99997
+offset_top = 504.00006
+offset_right = -41.0
+offset_bottom = 532.00006
+grow_horizontal = 2
+scale = Vector2(2.8282993, 2.8282993)
+theme_override_fonts/font = ExtResource("2_eqmdw")
+text = "ANA MENÜ"
+
+[connection signal="pressed" from="UI/MagazaPaneli/MarginContainer/VBoxContainer/BtnKulube" to="." method="_on_btn_kulube_pressed"]
+[connection signal="pressed" from="UI/MagazaPaneli/MarginContainer/VBoxContainer/BtnEv" to="." method="_on_btn_ev_pressed"]
+[connection signal="pressed" from="UI/MagazaPaneli/MarginContainer/VBoxContainer/BtnIlkokul" to="." method="_on_btn_ilkokul_pressed"]
+[connection signal="pressed" from="UI/MagazaPaneli/MarginContainer/VBoxContainer/BtnHastane" to="." method="_on_btn_hastane_pressed"]
+[connection signal="pressed" from="UI/MagazaPaneli/MarginContainer/VBoxContainer/BtnUniversite" to="." method="_on_btn_universite_pressed"]
+[connection signal="pressed" from="UI/MagazaPaneli/BtnOyunuBitir" to="." method="_on_btn_oyunu_bitir_pressed"]
+[connection signal="value_changed" from="UI/SesPaneli/HBoxContainer/VBoxContainer/MuzikSlider" to="." method="_on_muzik_slider_value_changed"]
+[connection signal="value_changed" from="UI/SesPaneli/HBoxContainer/VBoxContainer2/SesEfektiSlider" to="." method="_on_ses_efekti_slider_value_changed"]
+[connection signal="pressed" from="UI/BonusPaneli/BtnBonusKulube" to="." method="_on_btn_bonus_kulube_pressed"]
+[connection signal="pressed" from="UI/BonusPaneli/BtnBonusEv" to="." method="_on_btn_bonus_ev_pressed"]
+[connection signal="pressed" from="UI/BonusPaneli/BtnBonusIlkokul" to="." method="_on_btn_bonus_ilkokul_pressed"]
+[connection signal="pressed" from="UI/BonusPaneli/BtnBonusHastane" to="." method="_on_btn_bonus_hastane_pressed"]
+[connection signal="pressed" from="UI/BonusPaneli/BtnBonusUniversite" to="." method="_on_btn_bonus_universite_pressed"]
+[connection signal="pressed" from="WinScreen/AnaMenuButonu" to="." method="_on_ana_menu_butonu_pressed"]

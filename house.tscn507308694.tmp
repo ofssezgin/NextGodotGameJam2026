@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://dktt88ilba5oa"]
+
+[ext_resource type="Script" uid="uid://biwr32i4b6uo1" path="res://house.gd" id="1_metfq"]
+[ext_resource type="Texture2D" uid="uid://bojuqkmywe8l6" path="res://okul.png" id="2_vy7fe"]
+[ext_resource type="AudioStream" uid="uid://clfi1g1lvprne" path="res://alexzavesa-boards-fall-4-468370.mp3" id="3_o1325"]
+[ext_resource type="AudioStream" uid="uid://cbyhimo87pvfp" path="res://mixkit-hard-pop-click-2364.wav" id="4_vy7fe"]
+[ext_resource type="FontFile" uid="uid://bdr5evxow8aqv" path="res://PixelifySans-VariableFont_wght.ttf" id="5_vy7fe"]
+[ext_resource type="FontFile" uid="uid://bnhh7obf8sca8" path="res://LowresPixel-Regular.otf" id="6_10qhy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_metfq"]
+size = Vector2(130, 127)
+
+[sub_resource type="Gradient" id="Gradient_6syyc"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o1325"]
+gradient = SubResource("Gradient_6syyc")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="House" type="Area2D" unique_id=1419935653]
+position = Vector2(392, 178)
+script = ExtResource("1_metfq")
+building_name = null
+cost = null
+production_per_sec = null
+click_value = null
+is_final_building = null
+custom_font = ExtResource("5_vy7fe")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1385426113]
+scale = Vector2(4, 4)
+texture = ExtResource("2_vy7fe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1030489800]
+shape = SubResource("RectangleShape2D_metfq")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=396501652]
+position = Vector2(3.8146973e-06, 7.6293945e-06)
+scale = Vector2(1.9999999, 2.0000002)
+color = Color(0.7989189, 0.7536369, 0.33680275, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_o1325")
+
+[node name="BuySound" type="AudioStreamPlayer" parent="." unique_id=879420325]
+stream = ExtResource("3_o1325")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=411882175]
+stream = ExtResource("4_vy7fe")
+
+[node name="IsimLabel" type="Label" parent="." unique_id=1277100940]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = -51.0
+offset_right = 20.0
+offset_bottom = -28.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("6_10qhy")
+theme_override_font_sizes/font_size = 24
+text = "OKUL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TiklamaLabel" type="Label" parent="." unique_id=239592790]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = 35.0
+offset_right = 20.0
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0.3254902, 1, 1)
+theme_override_fonts/font = ExtResource("6_10qhy")
+theme_override_font_sizes/font_size = 24
+text = "+2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

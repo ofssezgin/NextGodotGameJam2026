@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dntpxtnt4yfdp"]
+
+[ext_resource type="AudioStream" uid="uid://dboogg0vvcgbn" path="res://leberch-sad-513238.mp3" id="1_tylfe"]
+
+[node name="MusicManager" type="AudioStreamPlayer" unique_id=1045171130]
+stream = ExtResource("1_tylfe")
+autoplay = true
+bus = &"Music"

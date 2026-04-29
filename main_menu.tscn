@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://dqw0jykn1k8dm"]
+
+[ext_resource type="Script" uid="uid://bhc5kc8j7omoq" path="res://main_menu.gd" id="1_7vrkn"]
+[ext_resource type="FontFile" uid="uid://bnhh7obf8sca8" path="res://LowresPixel-Regular.otf" id="2_7vrkn"]
+
+[node name="MainMenu" type="Control" unique_id=2024105279]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vrkn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=349067111]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=541653607]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -302.0
+offset_top = -281.0
+offset_right = 303.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 110
+text = "GELECEGINI
+INSA ET"
+horizontal_alignment = 1
+
+[node name="basla" type="Button" parent="." unique_id=1837642209]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -13.0
+offset_right = 98.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 64
+text = "BASLA
+"
+
+[node name="cikis" type="Button" parent="." unique_id=614781506]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 91.0
+offset_right = 45.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 32
+text = "CIKIS"
+
+[node name="SesSlider" type="HSlider" parent="." unique_id=514854061]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 864.0
+offset_top = 357.0
+offset_right = 992.0
+offset_bottom = 373.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SesAyarı" type="Label" parent="." unique_id=1821126291]
+layout_mode = 0
+offset_left = 870.0
+offset_top = 315.0
+offset_right = 982.0
+offset_bottom = 340.0
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 24
+text = "Muzik Sesi"
+
+[connection signal="pressed" from="basla" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="cikis" to="." method="_on_cikis_pressed"]
+[connection signal="value_changed" from="SesSlider" to="." method="_on_ses_slider_value_changed"]
